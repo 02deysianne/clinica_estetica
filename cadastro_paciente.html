@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cadastro de Paciente</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+
+    html {
+      scroll-behavior: smooth;
+      background-image: url(./img/fundo2.png);
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    header {
+      background-color: rgb(85, 85, 85);
+      border-bottom: 1px solid #cccccc;
+      display: flex;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+
+    #area-logo img {
+      padding-right: 9%;
+      height: 40%;
+      width: 40%;
+    }
+
+    #area-logo h1 {
+      padding-left: 20%;
+      font-size: 30px;
+      margin: 0;
+      font-weight: bold;
+    }
+
+    #area-logo span {
+      color: #f4b6b2;
+      font-size: 30px;
+      font-weight: bold;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    h1 {
+      text-align: center;
+      justify-content: center;
+    }
+
+    form {
+      max-width: 400px;
+      margin: 90px auto;
+      background: #fab6b2;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    }
+
+    label {
+      display: block;
+      margin-top: 10px;
+    }
+
+    input[type="text"],
+    input[type="date"],
+    select,
+    input[type="tel"],
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 10px;
+      margin: 5px 0;
+      border: 1px solid #ccc;
+      border-radius: 7px;
+    }
+
+    button {
+      display: block;
+      margin: 0 auto;
+      background: #333;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      cursor: pointer;
+      text-decoration: none;
+      text-align: center;
+    }
+
+    #container-quaternario {
+      width: 92%;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      justify-content: space-between;
+      margin-top: 50px;
+      margin-right: 0px;
+      margin-left: 20px;
+      margin-bottom: 50px;
+    }
+
+    #container-separador01 {
+      width: 20%;
+      padding-top: 4%;
+      padding-left: 4%;
+      font-size: 120%;
+      color: #f4b6b2;
+      text-shadow: 1px 1px 3px #000000;
+      text-align: center;
+      margin: 0;
+    }
+
+    nav {
+      display: flex;
+    }
+
+    #area-menu {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+    }
+
+    #area-menu li {
+      margin: 0 10px;
+    }
+
+    #area-menu li:first-child {
+      margin-left: 0;
+    }
+
+    #area-menu li:last-child {
+      margin-right: 0;
+    }
+
+    #area-menu a {
+      text-decoration: none;
+      color: white;
+      padding: 4px;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    #area-menu a:hover {
+      background-color: #f4b6b2;
+    }
+
+    #button-type-1 {
+      background-color: #f4b6b2;
+      color: black;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    #button-type-1:hover {
+      background-color: rgb(247, 206, 213);
+    }
+
+    #button-type-2 {
+      background-color: transparent;
+      color: #333333;
+      padding: 10px 20px;
+      border: 2px solid #333333;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease-in-out;
+    }
+
+    #button-type-2:hover {
+      background-color: #333333;
+      color: #ffffff;
+    }
+
+    #container-quaternario {
+      width: 92%;
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      justify-content: space-between;
+      margin-top: 50px;
+      margin-right: 0px;
+      margin-left: 20px;
+      margin-bottom: 50px;
+    }
+
+
+    #container-separador01 {
+      width: 20%;
+      padding-top: 4%;
+      padding-left: 4%;
+      font-size: 120%;
+      color: #f4b6b2;
+      text-shadow: 1px 1px 3px #000000;
+      text-align: center;
+      margin: 0;
+    }
+
+
+    #container-quinario {
+      background-repeat: no-repeat;
+      background-size: cover;
+      font-size: 130%;
+      padding: 70px;
+      color: #f4b6b2;
+      text-align: center;
+      background-color: #333333;
+    }
+
+    .styled-select {
+      width: 200px;
+    }
+
+    .styled-select select {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid transparent;
+      border-radius: 5px;
+      background-color: #f5ccc9;
+      color: black;
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div id="area-logo">
+      <h1><img src="./img/logo1.png"></img><span>Centro de Estética Lótus</span></h1>
+    </div>
+    <nav>
+      <ul id="area-menu">
+        <li><a id="link" href="./index.html">Home</a></li>
+        <li><a id="link" href="cadastro_procedimento.html">Procedimetos</a></li>
+        <div class="styled-select">
+          <select onchange="window.location.href=this.value;">
+            <option value="#" selected>Cadastros</option>
+            <option value="cadastro_paciente.html">Pacientes</option>
+            <option value="cadastro_procedimento.html">Procedimentos</option>
+            <option value="cadastro_produtos.html">Produtos</option>
+            <option value="cadastro_fornecedor.html">Fornecedores</option>
+            <option value="cadastro_funcionario.html">Funcionários</option>
+          </select>
+        </div>
+      </ul>
+    </nav>
+  </header>
+  <form action="atualizar_paciente.php" method="post">
+    <h1>Cadastro de Paciente</h1>
+    <label for="nome">Nome:</label>
+    <input type="text" id="nome" name="nome" placeholder="Ex:Maria Santos" required>
+
+    <label for="data_nascimento">Data de Nascimento:</label>
+    <input type="date" id="data_nascimento" name="data_nascimento" required>
+
+    <label for="sexo_paciente">Gênero:</label>
+    <select id="sexo_paciente" name="sexo_paciente" required>
+      <option value="masculino">Selecione</option>
+      <option value="masculino">Masculino</option>
+      <option value="feminino">Feminino</option>
+    </select>
+
+    <label for="telefone">Telefone:</label>
+    <input type="tel" id="telefone" name="telefone" placeholder="(00)00000-0000" maxlength="14">
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" placeholder="Ex:mariasantos@gmail.com" required>
+
+    <label for="cpf">CPF:</label>
+    <input type="text" id="cpf" name="cpf" placeholder="000.000.000-00" required maxlength="14">
+
+    <button href="atualizar_paciente.php"> Continuar</button>
+  </form>
+
+  <div className="container-quaternario" id="container-quinario">
+    <div className="container-separador02">
+      <h1>Entre em Contato Conosco!</h1>
+      <p>Rua XV de Novembro, 7840 - XXXXX-XXX - Guarapuava, PR</p>
+      <p>Telefone: (42) XXXXX-XXXX</p>
+      <p>E-mail: esteticalotus@gmail.com</p>
+      <p>Lótus - Estética e Saúde - CNPJ XX.XXX.XXX/XXXX-XX</p>
+      <p>&copy; Todos os direitos reservados a Lótus - Estética e Saúde</p>
+    </div>
+  </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var cpfInput = document.getElementById("cpf");
+      cpfInput.addEventListener("input", function () {
+        var value = cpfInput.value.replace(/\D/g, '');
+        var formattedValue = value.replace(/(\d{3})(\d{3})(\d{3})(\d{2})/, '$1.$2.$3-$4');
+
+        cpfInput.value = formattedValue;
+      });
+    });
+    document.addEventListener("DOMContentLoaded", function () {
+      var telefoneInput = document.getElementById("telefone");
+      telefoneInput.addEventListener("input", function (e) {
+        var value = e.target.value.replace(/\D/g, '');
+        var formattedValue = value.replace(/(\d{2})(\d{5})(\d{4})/, '($1) $2-$3');
+        e.target.value = formattedValue;
+      });
+    });
+  </script>
+</body>
+
+</html>

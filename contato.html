@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="contato.css">
+    <title>contato</title>
+</head>
+<body>
+    <form method="post">
+    <div class="container"></div>
+        <div class="container2">
+            <h2>Entre em contato conosco!<br><br></h2>
+            <div class="address">
+                <div class="item">
+                </i><a href="https://api.whatsapp.com/send?phone=5542900000000" target="_blank" rel="noreferrer">(42) 9-0000-0000</a></div><br>
+                <div class="item">
+                </i><a href="https://www.instagram.com/test_teste/" target="_blank" rel="noreferrer">@test_teste</a></div><br>
+                <div class="item">
+                <a href="https://www.facebook.com/test_teste/" target="_blank" rel="noreferrer">/test_teste</a></div><br>
+                <div class="item">
+                <p>Rua teste,000-protótipo<br>Guarapuava / PR</p></div>
+            </div>
+        </div>
+        <div>
+        <div class="container3">
+            <div class="content">  
+            <form action="" method="POST" class="form-layout">
+                <input type="hidden" name="contato[subject]" value="Contato Site">
+                <div class="form-group">
+                    <input type="text" name="contato[nome]" id="nome" placeholder="Seu nome" required="required"></div>
+                <div class="form-group">
+                    <input type="email" name="contato[email]" id="email" placeholder="E-mail" required="required"></div>
+                <div class="form-group">
+                    <input type="tel" name="contato[tel]" id="tel" class="tel-mask" placeholder="Telefone" required="required" maxlength="15"></div>
+                <div class="form-group">
+                    <input type="text" name="contato[assunto]" id="assunto" placeholder="Assunto" required="required"></div>
+                <div class="form-group">
+                    <textarea type="text" id="textarea" placeholder="Mensagem" required="required"></textarea></div>
+                <div class="button">
+                <button>ENVIAR</button>
+                </div>
+            </div>
+        </div>
+    </form>
+</body>
+</html>
